@@ -20,6 +20,9 @@ public class ProductOrderController {
     @Autowired
     private ProductOrderService productOrderService;
 
+    @Autowired
+    private ProductOrderRepository repository;
+
     private static final Logger log = LoggerFactory.getLogger(ProductOrderController.class);
 
     @RequestMapping(method = RequestMethod.POST, value = "/productorder")
@@ -29,20 +32,22 @@ public class ProductOrderController {
         return ResponseEntity.status(HttpStatus.OK).body(productOrderId);
     }
 
-    //llama productorder por id
-    @RequestMapping(method = RequestMethod.GET, value = "/productorder/{productOrderId}")
-    public Optional<ProductOrder> getProductOrderById(@PathVariable Integer productOrderId){
-        return productOrderService.getProductOrderById(productOrderId);
 
+
+    @RequestMapping(method = RequestMethod.GET, value = "/productorder/{orderId}")
+    public List<ProductOrderResponse> findByOrderID(@PathVariable Integer orderId){
+        return productOrderService.findByOrderID(orderId);
     }
 
 
-    //order id
-//    @RequestMapping(method = RequestMethod.POST, value = "/product")
-//    public Optional<ProductOrderResponse> addOrderByIdProductOrder(@PathVariable Integer orderId){
-//        return productOrderService.getOrderByIdProductOrder(orderId);
-//
+
+
+//    @RequestMapping(method = RequestMethod.GET, value = "/productorder/{orderId}")
+//    public List<ProductOrder> findByOrderID(@PathVariable Integer orderId){
+//        return repository.findByOrderID(orderId);
 //    }
+
+
 
 
 

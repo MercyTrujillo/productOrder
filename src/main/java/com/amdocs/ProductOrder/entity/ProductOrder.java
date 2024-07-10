@@ -15,25 +15,25 @@ public class ProductOrder {
     private Integer productOrderId;
 
     @Column(name = "product_id")
-    private Integer productID;
+    private Integer productId;
 
 
 
     private Integer quantity;
 
     @Column(name = "order_id")
-    private Integer orderID;
+    private Integer orderId;
 
     public ProductOrder (){
 
     }
 
 
-    public ProductOrder(Integer productOrderId, Integer productID, Integer quantity, Integer orderID) {
+    public ProductOrder(Integer productOrderId, Integer productId, Integer quantity, Integer orderId) {
         this.productOrderId = productOrderId;
-        this.productID = productID;
+        this.productId = productId;
         this.quantity = quantity;
-        this.orderID = orderID;
+        this.orderId = orderId;
     }
 
     public Integer getProductOrderId() {
@@ -44,12 +44,12 @@ public class ProductOrder {
         this.productOrderId = productOrderId;
     }
 
-    public Integer getProductID() {
-        return productID;
+    public Integer getProductId() {
+        return productId;
     }
 
-    public void setProductID(Integer productID) {
-        this.productID = productID;
+    public void setProductId(Integer productId) {
+        this.productId = productId;
     }
 
     public Integer getQuantity() {
@@ -60,21 +60,21 @@ public class ProductOrder {
         this.quantity = quantity;
     }
 
-    public Integer getOrderID() {
-        return orderID;
+    public Integer getOrderId() {
+        return orderId;
     }
 
-    public void setOrderID(Integer orderID) {
-        this.orderID = orderID;
+    public void setOrderId(Integer orderId) {
+        this.orderId = orderId;
     }
 
     @Override
     public String toString() {
         return "ProductOrder{" +
                 "productOrderId=" + productOrderId +
-                ", productID=" + productID +
+                ", productId=" + productId +
                 ", quantity=" + quantity +
-                ", orderID=" + orderID +
+                ", orderId=" + orderId +
                 '}';
     }
 }
