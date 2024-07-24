@@ -16,7 +16,6 @@ public class ProductOrderApplication {
 		SpringApplication app = new SpringApplication(ProductOrderApplication.class);
 		app.setDefaultProperties(Collections.singletonMap("server.port", "8084"));
 		app.run(args);
-
 		log.info("Mercy Jacqueline Trujillo Rodriguezzzzzz");
 	}
 }
