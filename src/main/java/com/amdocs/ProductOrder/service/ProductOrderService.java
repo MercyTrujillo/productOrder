@@ -68,8 +68,7 @@ public class ProductOrderService {
 
     public ProductOrderResponse updateProducts(Integer orderId, List<ProductOrderRequest> productOrderRequest) {
 
-        //ProductOrder existingProductOrder = productOrderRepository.findById(orderId).orElseThrow(()
-             //   -> new EntityNotFoundException("ProductOrder not found"));
+
         List<ProductOrder> productOrderList = productOrderRepository.findByOrderId(orderId);
         deleteProductsUpdate(orderId);
 
